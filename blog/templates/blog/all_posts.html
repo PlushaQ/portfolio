@@ -13,13 +13,13 @@
     {% for blog_post in blog_posts.all %}
         <div class="col">
             <div>
-                <a href="#"><h3>{{ blog_post.title}} </h3></a>
-                <p>Published on {{ blog_post.publish_date }}</p>
+                <a href=""><h3>{{ blog_post.title}} </h3></a>
+                <p>Published on {{ blog_post.publish_time }}</p>
             </div>
             <br/>
             <img class="image-fluid" src="{{ blog_post.image.url }}" alt="blog post image" height=200 width=fixed />
             <br/>
-            <p class="card-text"> {{ blog_post.body }}</p>
+            <p class="card-text"> {{ blog_post.summary }}</p>
 
         </div>
         <hr>
