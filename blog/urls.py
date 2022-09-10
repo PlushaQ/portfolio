@@ -1,7 +1,7 @@
 from django.urls import path, include
 
+from . import views
 
-urlpatterns = [path('admin/', admin.site.urls),
-               path("", jobs.views.home, name="home"),
-               path("blog/", include('blog.urls')),
+urlpatterns = [
+               path("", views.all_posts, name="all_posts"),
               ]

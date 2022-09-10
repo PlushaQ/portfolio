@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Blog by Maciej Fularz{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center pt-3">Welcome to my blog</h1>
+    <br/>
+    <br/>
+    <h2>Latest posts</h2>
+    <hr/>
+
+    {% for blog_post in blog_posts.all %}
+        <div class="col">
+            <div>
+                <a href="#"><h3>{{ blog_post.title}} </h3></a>
+                <p>Published on {{ blog_post.publish_date }}</p>
+            </div>
+            <br/>
+            <img class="image-fluid" src="{{ blog_post.image.url }}" alt="blog post image" height=200 width=fixed />
+            <br/>
+            <p class="card-text"> {{ blog_post.body }}</p>
+
+        </div>
+        <hr>
+        {% endfor %}
+</div>
+
+{% endblock %}
+
