@@ -10,7 +10,7 @@
     <h2>Latest posts</h2>
     <hr/>
 
-    {% for blog_post in blog_posts.all %}
+    {% for blog_post in blog_posts.all%}
         <div class="col">
             <div>
                 <a href="{% url 'blog_post' blog_post.id %}"><h3>{{ blog_post.title }} </h3></a>
