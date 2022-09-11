@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="" name="description">
@@ -92,9 +93,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-link" href="#">Resume</a>
-          <a class="nav-link" href="#">Twitter</a>
-          <a class="nav-link active" href="/blog/">Blog</a>
+          <a class="nav-link active" href="{% static 'Resume.pdf' %}">Resume</a>
+          <a class="nav-link active" href="{% url 'all_posts' %}">Blog</a>
+          <a class="nav-link active" href="https://twitter.com/MaciejFularz">Twitter</a>
         </div>
       </div>
     </div>
